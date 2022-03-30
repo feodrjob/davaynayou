@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "565041673740",
+    "project_id": "davaynayou-5a748",
+    "storage_bucket": "davaynayou-5a748.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:565041673740:android:0e89183ee053e6d0a16029",
+        "android_client_info": {
+          "package_name": "com.project.rest"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "565041673740-6vj27hdirrphob7fehb9bve72ab5ck1h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAEGOyfIQVcwn9ya6Ai1Op-UN_rr_evMAc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "565041673740-6vj27hdirrphob7fehb9bve72ab5ck1h.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
