@@ -27,7 +27,11 @@ import com.google.firebase.ktx.Firebase
 import com.project.rest.databinding.ActivityMainBinding
 import com.rengwuxian.materialedittext.MaterialEditText
 import com.project.rest.R
-class MainActivity : AppCompatActivity() {
+import com.project.rest.ui.BlankFragment
+import com.project.rest.ui.home.HomeFragment
+import kotlinx.android.synthetic.main.activity_main.*
+
+class MainActivity : AppCompatActivity(){
 
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityMainBinding
@@ -57,11 +61,14 @@ class MainActivity : AppCompatActivity() {
 
 
 
-        val brtap1 = findViewById<ImageButton>(R.id.imageButton3)
-        brtap1.setOnClickListener{
-            val Intent = Intent(this,Bron::class.java)
-            startActivity(Intent)
-        }
+
+
+
+
+
+
+
+
 
 
 
@@ -89,15 +96,6 @@ class MainActivity : AppCompatActivity() {
         val myImageButton1 = Toast.makeText(this,"Я кнопка и я работаю", Toast.LENGTH_SHORT)
         myImageButton1.show()
     }
-
-
-
-
-
-
-
-
-
 
 
 

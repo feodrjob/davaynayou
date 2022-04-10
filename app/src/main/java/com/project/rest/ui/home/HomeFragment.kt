@@ -15,11 +15,13 @@ import androidx.lifecycle.ViewModelProvider
 import com.project.rest.Bron
 import com.project.rest.R
 import com.project.rest.databinding.FragmentHomeBinding
+import com.project.rest.ui.Communicator
 
 class HomeFragment : Fragment() {
 
     private lateinit var homeViewModel: HomeViewModel
     private var _binding: FragmentHomeBinding? = null
+    private lateinit var communicator: Communicator
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -37,16 +39,32 @@ class HomeFragment : Fragment() {
             ViewModelProvider(this).get(HomeViewModel::class.java)
 
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
+
+
+            binding.imageButton3.setOnClickListener{
+                val a = activity
+                if(a!=null) {
+
+                    val Intent = Intent(activity, Bron::class.java)
+                    startActivity(Intent)
+                }
+        }
+
+
+
+
+
+
+
+
+
+
+
         val root: View = binding.root
-
-
-
-
-
-
         return root
 
     }
+
 
     override fun onDestroyView() {
         super.onDestroyView()

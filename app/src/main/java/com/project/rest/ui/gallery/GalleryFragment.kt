@@ -7,10 +7,7 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.EditText
-import android.widget.TextView
-import android.widget.Button
-import android.widget.Toast
+import android.widget.*
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
@@ -48,6 +45,8 @@ class GalleryFragment : Fragment() {
 
 
 
+
+
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View
 
     {
@@ -60,7 +59,8 @@ class GalleryFragment : Fragment() {
 
 
 
-        binding.breg.setOnClickListener {
+        binding.breg.setOnClickListener{
+
             val email: String = Email.getText().toString()
             val password: String = Password.getText().toString()
 
@@ -74,17 +74,31 @@ class GalleryFragment : Fragment() {
                     } else {
                         // If sign in fails, display a message to the user.
                         Log.w(TAG, "createUserWithEmail:failure", task.exception)
-                        Toast.makeText(context, "Вы зарегестрировались",
-                            Toast.LENGTH_SHORT).show()
+                        Toast.makeText(
+                            context, "Вы зарегестрировались",
+                            Toast.LENGTH_SHORT
+                        ).show()
                         updateUI(null)
                     }
                 }
 
-
-
-
-
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         binding.blog.setOnClickListener{
             val email: String = Email.getText().toString()
@@ -105,6 +119,7 @@ class GalleryFragment : Fragment() {
                         updateUI(null)
                     }
                 }
+
 
         }
 
@@ -173,6 +188,9 @@ class GalleryFragment : Fragment() {
 
     }
 
+
+
+
     private fun updateUI(user: FirebaseUser?) {
 
     }
@@ -182,7 +200,8 @@ class GalleryFragment : Fragment() {
         // Check if user is signed in (non-null) and update UI accordingly.
         val currentUser = auth.currentUser
         if(currentUser != null){
-            reload();
+            Toast.makeText(context, "Добрый день, вы вошли в свой аккаунт ",
+                Toast.LENGTH_SHORT).show()
         }
     }
 
